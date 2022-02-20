@@ -1,0 +1,617 @@
+<title>network iii</title>
+<style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}.tmblr-iframe--amp-cta-button{visibility:hidden;position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:100}.tmblr-iframe--amp-cta-button.tmblr-iframe--loaded{visibility:visible;animation:iframe-app-cta-transition .2s ease-out}</style><link rel="stylesheet" media="screen" href="https://assets.tumblr.com/client/prod/standalone/blog-network-npf/index.build.css?_v=b84ed2eb31f8e1bbdb3e7a53afa67dd4"><link rel="shortcut icon" href="https://64.media.tumblr.com/avatar_a3b67cd22a50_128.pnj">
+ 
+<!-- scripts - DO NOT TOUCH -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script src="https://static.tumblr.com/rzl30kg/eAxm7a751/jquery.style-my-tooltips.js"></script>
+<script>
+   (function($){
+       $(document).ready(function(){
+           $("[title]").style_my_tooltips({
+               tip_follows_cursor:true,
+               tip_delay_time:200,
+               tip_fade_speed:300
+           }
+               );
+       });
+   })(jQuery);
+</script>
+
+<!-- custom font -->
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'> 
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+ 
+ 
+<style type="text/css">
+
+@keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity:0; }
+    to   { opacity:1; }
+}
+
+/*-- selection --*/
+
+::-moz-selection { background:#eee; color:#222; }
+::selection { background:#eee; color:#222; }
+
+/*-- scrollbar --*/
+
+::-webkit-scrollbar {  
+    width:1px;  
+    height:2px;
+}  
+   
+::-webkit-scrollbar-thumb { background-color:#aaa; } /* scrollbar colour */
+ 
+/*-- tooltips --*/
+
+#s-m-t-tooltip {
+    color:#666;
+    background-color:#fafafa; 
+    font-size:8px;
+    font-family:'Open Sans', helvetica, sans-serif;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    text-align:center;
+    position:absolute;
+    padding:0px 5px 0px 5px;
+    margin-top:30px;
+    border:1px solid #eee;
+    z-index:9999;
+}
+
+/*-- tumblr controls --*/
+
+.tmblr-iframe, .iframe-controls–desktop {
+    display:none !important;
+}
+
+/*-- general customisation --*/
+
+body {
+    color:#666; /* text colour */
+    background-color:#fff; /* background colour */
+    font-style:normal; 
+    font-family:'Open Sans', helvetica, sans-serif; 
+    font-size:10px; 
+    font-weight:400;
+    text-decoration:none; 
+    line-height:180%; 
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    -webkit-animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s;
+    -o-animation: fadein 1.5s; 
+    animation: fadein 1.5s;
+}
+
+a {
+    text-decoration:none;
+    color:#444; /* links colour */
+    transition-duration: 0.6s;  
+    -moz-transition-duration: 0.6s;  
+    -webkit-transition-duration: 0.6s;  
+    -o-transition-duration: 0.6s;
+}   
+    
+a:hover {
+    color:#bad0f1; /* links hover colour */
+    cursor:pointer;
+    transition-duration: 0.6s;  
+    -moz-transition-duration: 0.6s;  
+    -webkit-transition-duration: 0.6s;  
+    -o-transition-duration: 0.6s;
+}
+
+b, strong { font-weight:700; color:#444; }
+i, em { font-style:italic; }
+
+/*-- sidebar --*/
+
+#sidebar {
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:64px;
+    z-index:999!important;
+    background:#fafafa; /* sidebar background colour */
+    border-right:1px solid #eee;
+}
+
+#sidelinks { margin-top:50vh; transform:translateY(-50%); }
+
+#sidelinks a {
+    display:block;
+    font-size:14px;
+    line-height:100%;
+    height:14px;
+    width:14px;
+    padding:10px;
+    margin:15px;
+    border-radius:100%;
+    background:#fff; /*sidebar links background colour */
+    border:1px solid #eee;
+}
+
+.hover .hovertext {
+    width:auto;
+    background:#bad0f1;
+    color:#fff; /* sidebar links text colour */
+    font-size:10px; /* sidebar links font size */
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:0.5px;
+    padding:3px 7px 3px 7px;
+    position:absolute;
+    margin-top:-3px;
+    margin-left:40px; 
+    z-index:999!important;
+    opacity:0;
+    transition:opacity 0.6s;
+}
+
+.hover:hover .hovertext { opacity:1; transition:opacity 0.6s; }
+
+.hover .hovertext::after {
+    content:" ";
+    position:absolute;
+    top:50%;
+    right:100%;
+    margin-top:-8px;
+    border-width:8px;
+    border-style:solid;
+    border-color:transparent #bad0f1 transparent transparent; /*link hover colour */
+}
+
+/*-- header --*/
+
+header {
+    margin:100px auto 100px;
+    width:300px;
+    text-align:center;
+}
+
+#icon {
+    margin:0 auto;
+    width:50px;
+    height:50px;
+}
+
+#icon img { width:50px; height:50px; border-radius:100%; }
+
+#title {
+    margin:20px 0px 5px 0px;
+    font-size:16px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:#000; /*title colour*/
+}
+
+/*--filters--*/
+
+#sort { margin-top:20px; }
+
+#sort ul {
+    display:block;
+    list-style:none; 
+    padding-left:0px;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+#sort li { display:inline; list-style:none; } 
+#sort li a.selected { font-weight:600; color:#222; } /* selected filter colour */
+
+#sort a { 
+    display:inline; 
+    margin-right:10px; 
+    font-style:italic; 
+    text-transform:lowercase; 
+}
+
+#sort b { 
+    text-transform:uppercase; 
+    letter-spacing:0.5px; 
+    margin-right:10px; 
+}
+
+/*-- content --*/
+
+#content {
+    margin:0 auto;
+    margin-bottom:100px;
+    width:calc((280px + 40px + 2px) * 3);
+    /* ((box width + 2*margin + 2*border width) * number of columns) */
+}
+
+.box {
+    width:280px; /* image width x 2 + 30px */
+    height:125px; /* image height */
+    margin:20px;
+    float:left;
+    background:#fafafa; /*box background colour */
+    border:1px solid #eee;
+}
+
+.name {
+    width:30px;
+    height:125px; /* image height */
+    position:absolute;
+}
+
+.name h1 {
+    transform-origin:180% 260%;
+    transform:rotate(-90deg);
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.5px;
+}
+
+.box img {
+    position:absolute;
+    width:125px; /* image width */
+    height:125px; /* image height */
+    margin-left:30px;
+}
+
+.url {
+    position:absolute;
+    margin-left:155px;
+    height:25px;
+    width:125px;
+    line-height:25px;
+    text-align:center;
+    background:#fff; /*url background colour */
+    font-style:italic;
+    font-weight:600;
+    border-bottom:1px solid #eee;
+}
+
+.desc {
+    position:absolute;
+    margin-left:155px;
+    margin-top:25px;
+    width:125px;
+    height:100px;
+}
+
+.t {
+    text-align:center;
+    line-height:160%;
+    margin-top:10px;
+    margin-left:10px;
+    margin-bottom:10px;
+    padding-right:10px;
+    max-height:80px;
+    overflow-Y:scroll;
+    margin-top:calc(20% + 25px);
+    transform:translateY(-50%);
+}
+
+/*-- credit - DO NOT TOUCH --*/
+
+.credit a {
+    bottom:15px;
+    right:20px;
+    position:fixed;
+}
+
+#hc {
+    bottom:20px;
+    left:85px;
+    position:fixed;
+}
+
+</style>
+<script src="https://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=a8fadfa499d8cb7c3f8eefdf0b1adfdd"></script><link rel="stylesheet" type="text/css" href="https://assets.tumblr.com/fonts/brutaltype/stylesheet.css?v=1"><!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:site_name" content="Tumblr" /><meta property="og:title" content="Tumblr" /><meta property="og:url" content="https://enchantedthemes.tumblr.com/network3" /><meta property="og:type" content="article" /><meta property="og:determiner" content="a" /><meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=enchantedthemes&amp;postID=" /><meta property="al:ios:app_name" content="Tumblr" /><meta property="al:ios:app_store_id" content="305343404" /><meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=enchantedthemes&amp;postID=" /><meta property="al:android:app_name" content="Tumblr" /><meta property="al:android:package" content="com.tumblr" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- TWITTER TAGS --><meta charset="utf-8"><meta name="twitter:site" content="tumblr" /><meta name="twitter:card" content="summary" /><meta name="twitter:description" content="enchantedthemes" /><meta name="twitter:title" content="enchantedthemes" /><meta name="twitter:app:name:iphone" content="Tumblr" /><meta name="twitter:app:name:ipad" content="Tumblr" /><meta name="twitter:app:name:googleplay" content="Tumblr" /><meta name="twitter:app:id:iphone" content="305343404" /><meta name="twitter:app:id:ipad" content="305343404" /><meta name="twitter:app:id:googleplay" content="com.tumblr" /><meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=enchantedthemes&amp;referrer=twitter-cards" /><meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=enchantedthemes&amp;referrer=twitter-cards" /><meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=enchantedthemes&amp;referrer=twitter-cards" /><link rel="canonical" href="https://enchantedthemes.tumblr.com/network3" /></head>
+
+
+<body>
+
+
+<div id="sidebar">
+    <div id="sidelinks">
+    <!-- this is where your sidebar links are. feel free to add more. icons can be found at https://linearicons.com/free -->
+        <a class="hover" "/"><span class="lnr lnr-home"></span><span class="hovertext">Evans</span></a>
+        <a class="hover" "/contact"><span class="lnr lnr-envelope"></span><span class="hovertext">BFF: Eris</span></a>
+        <a class="hover" "/post/174080387851"><span class="lnr lnr-menu"></span><span class="hovertext">PUGB&nbsp;&nbsp;</span></a>
+        <!-- do not remove this one!!! -->
+        <a class="hover" "http://enchantedthemes.tumblr.com"><span class="lnr lnr-code"></span><span class="hovertext">Made by Nashe</span></a>
+    </div>
+</div>
+
+
+<header>
+    <div id="icon"><img src="https://i.ibb.co/2NQ2xTp/Tumblr-18dbff74c499f3da160366cfba848230-bb01e904-1280.jpg"/></div>
+    <div id="title">iiSkyHeaven (160464540)</div>
+    <!-- delete this section if you don't want a description-->
+    <div class="d">It's not about going first. It's about the overall flow.</div>
+    <!-- up to here! -->
+    
+<!-- HOW TO CUSTOMISE THE FILTERS
+template for new filter groups: 
+    <ul class="filter option-set" data-filter-group="group1">
+    <b>category:</b>
+        <li><a href="#" data-filter-value="" class="selected">all</a></li>
+        <li><a href="#" data-filter-value=".filter">filter name</a></li>
+        <li><a href="#" data-filter-value=".filter">filter name</a></li>
+    </ul>
+    
+template for new filter:
+        <li><a href="#" data-filter-value=".filter">filter name</a></li>
+
+in order to make your filters match your books/tv shows/fic/whatever, you only need to change the '.filter' and 'filter name' part. the 'category' line is optional.
+for example, if I wanted to make my media filter by favourites only, my code would look like this
+    <li><a href="#" data-filter-value=".fave">favourites</a></li>
+note the areas where it's been changed.
+ 
+it is essential that you do not change any other part, including the 'exclusive' in the first filter group, as well as the first filter in every group.
+    <li><a href="#" data-filter-value="" class="selected">all</a></li>
+    
+if only one filter can be selected at a time for that group, add 'exculsive' after 'option-set'. 
+-->
+
+<div id="sort">
+    <ul class="filter option-set exclusive" data-filter-group="group1">
+        <li><a "#" data-filter-value="" class="selected">Evans</a></li>
+        
+    </ul>
+    <ul class="filter option-set" data-filter-group="group2">
+    <b>mexico</b>
+         
+    </ul>
+    <ul class="filter option-set" data-filter-group="group3">
+    <b>kimetsu no yaiba</b>
+ 
+    </ul>
+</div>
+
+</header>
+
+
+<div id="content">
+
+<!-- HOW TO ADD MORE AND FILTERS TO EACH MEMBER BOX
+template:
+<div class="box">
+    <div class="name"><h1>name</h1></div>
+    <img src=""/>
+    <div class="url"><a href="">@username</a></div>
+    <div class="desc">
+        <div class="t">description</div>
+    </div>
+</div>
+
+to add the filters, add the same name that you used above in the '.filter' but without the dot in front. you can add as many as you want but the 'box' in the beginning MUST stay there.
+
+for example, if you wanted to have the filters 'admin' and 'blue' together for one box, the filters should look like this 
+	<div class="box admin blue"> 
+note how media is still there in front.
+
+if you do not want the text on hover, just delete these lines from the book/tv show/fic/whatever in question.
+    <div class="overlay">
+        <div class="desc">desc</div>
+    </div>
+    
+if you do not want an image and overlay, delete these lines from the book/tv/show/fic/whatever in question
+    <img src=""/>
+    <div class="overlay">
+        <div class="desc">desc</div>
+    </div>
+-->
+    
+<div class="box admin one alpha">
+    <div class="name"><h1>Mitsuri</h1></div>
+    <img src="https://i.ibb.co/Tkz04h7/Tumblr-6fba808c2775743f2746827afb73bded-d6a3946b-1280.png"/>
+    <div class="url"><a "">
+甘露寺 蜜璃</a></div>
+    <div class="desc">
+        <div class="t">I'd rather die on an adventure than live standing still.</div>
+    </div>
+</div>
+
+<div class="box admin two gamma">
+    <div class="name"><h1>Muichiro</h1></div>
+    <img src="https://i.ibb.co/K9qN8bh/tumblr-4dc3f38311a27302b7c9df3ad4f89d48-0d04d1c4-1280.png"/>
+    <div class="url"><a "">
+時透 無一郎</a></div>
+    <div class="desc">
+        <div class="t">We meet fear. We greet the unexpected visitor and listen to what he has to tell us.</div>
+    </div>
+</div>
+
+<div class="box member three beta">
+    <div class="name"><h1>Shinobu</h1></div>
+    <img src="https://i.ibb.co/Bjhj2t1/Tumblr-7cf9a19953b635652833b4a56d1c5aa9-100bf2f8-1280.png"/>
+    <div class="url"><a "">胡蝶 しのぶ</a></div>
+    <div class="desc">
+        <div class="t">Even in the future the story begins with once upon a time.</div>
+    </div>
+</div>
+
+<div class="box member one beta">
+    <div class="name"><h1>Obanai</h1></div>
+    <img src="https://i.ibb.co/PskzhRT/Tumblr-6cd2d071da9bda4e7a37bb47cf2308ef-c92262cc-1280.png"/>
+    <div class="url"><a "">伊黑 小芭内</a></div>
+    <div class="desc">
+        <div class="t">Sometimes her inner voice could be very wise.</div>
+    </div>
+</div>
+
+<div class="box member two beta">
+    <div class="name"><h1>Uzui</h1></div>
+    <img src="https://i.ibb.co/PWKTN82/Tumblr-27cda0e907f63b06a8e5803ac432c15e-2c588cf0-1280.png"/>
+    <div class="url"><a "">宇髄 天元</a></div>
+    <div class="desc">
+        <div class="t">When people say impossible, they usually mean improbable.</div>
+    </div>
+</div>
+
+<div class="box member one gamma">
+    <div class="name"><h1>Kyojuro</h1></div>
+    <img src="https://i.ibb.co/QvphpRp/Tumblr-52e1cbec3cc7e9e0104d536b2af25742-26bb692c-1280.png"/>
+    <div class="url"><a "">煉獄 杏寿郎</a></div>
+    <div class="desc">
+        <div class="t">Everything about him suggested valor and power and a firm handshake.</div>
+    </div>
+</div>
+
+<div class="box member two alpha">
+    <div class="name"><h1>Giyu</h1></div>
+    <img src="https://i.ibb.co/RQbmFXr/Tumblr-75c3962299bd40ca115a26d260338676-1c058926-1280.png"/>
+    <div class="url"><a "">
+冨岡 義勇</a></div>
+    <div class="desc">
+        <div class="t">To the people who look at the stars and wish.</div>
+    </div>
+</div>
+
+<div class="box member three alpha">
+    <div class="name"><h1>Sanemi</h1></div>
+    <img src="https://i.ibb.co/zF843Hj/Tumblr-ad1b1c1c2ae59fc19918feeb70101924-c1fcccb8-1280.png"/>
+    <div class="url"><a "">不死川 実弥/a></div>
+    <div class="desc">
+        <div class="t">For the ones who dream of stranger worlds.</div>
+    </div>
+</div>
+
+<div class="box member three gamma">
+    <div class="name"><h1>Gyomei</h1></div>
+    <img src="https://i.ibb.co/d5gsgHz/Tumblr-c115f68d4547c9bad02b0d5c63d370d9-be832d4a-1280.png"/>
+    <div class="url"><a "">悲鳴嶼 行冥</a></div>
+    <div class="desc">
+        <div class="t">Maybe love was superstition, a prayer we said to keep the truth of loneliness at bay. </div>
+    </div>
+</div>
+    
+</div>
+
+
+<!-- credit - DO NOT TOUCH -->
+
+</div>
+
+
+<div id="hc">
+<script language="JavaScript">var fhs = document.createElement('script');var fhs_id = "5216064";
+var ref = (''+document.referrer+'');var pn =  window.location;var w_h = window.screen.width + " x " + window.screen.height;
+fhs.src = "//freehostedscripts.net/ocounter.php?site="+fhs_id+"&e1=online&e2=online&r="+ref+"&m=0&wh="+w_h+"&a=1&pn="+pn+"";
+document.head.appendChild(fhs);document.write("<span id='o_"+fhs_id+"'></span>");
+</script>
+<br>
+<script language="JavaScript">var fhsh = document.createElement('script');var fhs_id_h = "3305322";
+fhsh.src = "//freehostedscripts.net/ocount.php?site="+fhs_id_h+"&name=views&a=1";
+document.head.appendChild(fhsh);document.write("<span id='h_"+fhs_id_h+"'></span>");
+</script>
+</div>
+
+
+
+<iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">
+    (function(){
+        var analytics_frame = document.getElementById('ga_target');
+        var analytics_iframe_loaded;
+        var user_logged_in;
+        var blog_is_nsfw = 'No';
+
+        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+        var eventer = window[eventMethod];
+        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+        eventer(messageEvent,function(e) {
+            var message = (e.data && e.data.split) ? e.data.split(';') : '';
+            switch (message[0]) {
+                case 'analytics_iframe_loaded':
+                    analytics_iframe_loaded = true;
+                    postCSMessage();
+                    postGAMessage();
+                    break;
+                case 'user_logged_in':
+                    user_logged_in = message[1];
+                    postGAMessage();
+                    break;
+            }
+        }, false);
+
+        analytics_frame.src = "https://assets.tumblr.com/analytics.html?_v=9f5febfd57a8a649c598d888f2d9e062#" +
+                              "https://enchantedthemes.tumblr.com";
+        function postGAMessage() {
+            if (analytics_iframe_loaded && user_logged_in) {
+                var is_ajax = false;
+                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/network3?route=custom_page'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
+            }
+        }
+        function postCSMessage() {
+            COMSCORE = true;
+            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
+        }
+    })();
+</script><script type="text/javascript" nonce="0FtSsmR3j23hO0vfkc8iYGikY">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1645319548&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDovL2VuY2hhbnRlZHRoZW1lcy50dW1ibHIuY29tL25ldHdvcmszIiwicmVxdHlwZSI6MCwicm91dGUiOiJjdXN0b21fcGFnZSJ9&U=EJFNELDKMK&K=cfd291fad1cde50097076b8a8f4fb8a2fc3930045260daed014a14c272c5ee07&R='.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1645319548&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDovL2VuY2hhbnRlZHRoZW1lcy50dW1ibHIuY29tL25ldHdvcmszIiwicmVxdHlwZSI6MCwicm91dGUiOiJjdXN0b21fcGFnZSIsIm5vc2NyaXB0IjoxfQ==&U=EJFNELDKMK&K=86bff595ade960bffabf836ce3a73f3dd490f9ca9cac58766c863a1901449b70&R="></noscript><noscript id="bootloader" data-bootstrap="{&quot;Components&quot;:{&quot;PostActivity&quot;:[],&quot;NotificationPoller&quot;:{&quot;messaging_keys&quot;:[],&quot;token&quot;:&quot;c86f8a500596474a7ef5034081f694bd&quot;,&quot;inbox_unread&quot;:0},&quot;DesktopDashboardLogo&quot;:{&quot;animations&quot;:[[&quot;https:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1.png?_v=161861acded461bb6e995593a3bae835&quot;,&quot;https:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1@2x.png?_v=496a774637302a598c851381d00009b0&quot;]]},&quot;TumblelogIframe&quot;:{&quot;unified&quot;:true,&quot;variant&quot;:null,&quot;isCompact&quot;:true,&quot;tumblelogBundleSrc&quot;:&quot;https:\/\/assets.tumblr.com\/client\/prod\/standalone\/tumblelog\/index.build.js?_v=d0109502af8cc37605e97d58cb47ab78&quot;,&quot;tumblelogName&quot;:&quot;enchantedthemes&quot;,&quot;isLoggedIn&quot;:false,&quot;isFriend&quot;:false,&quot;formKey&quot;:&quot;&quot;,&quot;canSubscribe&quot;:false,&quot;isSubscribed&quot;:false,&quot;tumblelogTitle&quot;:&quot;enchanted themes&quot;,&quot;tumblelogAvatar&quot;:&quot;https:\/\/64.media.tumblr.com\/avatar_a3b67cd22a50_64.pnj&quot;,&quot;tumblelogAvatar128&quot;:&quot;https:\/\/64.media.tumblr.com\/avatar_a3b67cd22a50_128.pnj&quot;,&quot;tumblelogHost&quot;:&quot;https:\/\/enchantedthemes.tumblr.com&quot;,&quot;isOptica&quot;:false,&quot;isCustomTheme&quot;:true,&quot;themeHeaderImage&quot;:&quot;https:\/\/64.media.tumblr.com\/9fb88a348cf333012995017f506b09e6\/ebe6def127711c71-7f\/s2048x3072_c2125,0,97750,100000\/8616ef80ef72ca7a7c037988bcdebbf4513bde22.png&quot;,&quot;themeBackgroundColor&quot;:&quot;#FFFFFF&quot;,&quot;themeTitleColor&quot;:&quot;#102029&quot;,&quot;themeAccentColor&quot;:&quot;#bad8eb&quot;,&quot;brag&quot;:true,&quot;adsEnabled&quot;:false,&quot;canShowAd&quot;:true,&quot;isPremium&quot;:false,&quot;showLrecAds&quot;:false,&quot;showStickyLrecBackfill&quot;:false,&quot;showGeminiAds&quot;:false,&quot;geminiSectionCodeDesktop&quot;:&quot;a10bca9c-0c5d-4a02-ab13-14ab8513d81d&quot;,&quot;geminiSectionCodeMobile&quot;:&quot;ced63809-b609-4aca-96a0-abc099acba6b&quot;,&quot;currentPageType&quot;:null,&quot;currentPage&quot;:false,&quot;searchQuery&quot;:&quot;&quot;,&quot;tag&quot;:&quot;&quot;,&quot;query&quot;:&quot;&quot;,&quot;chrono&quot;:false,&quot;postId&quot;:&quot;&quot;,&quot;src&quot;:&quot;https:\/\/enchantedthemes.tumblr.com\/network3&quot;,&quot;postUrl&quot;:&quot;&quot;,&quot;isBlocked&quot;:null,&quot;isAdmin&quot;:false,&quot;lookupButtonUrl&quot;:&quot;&quot;,&quot;showSpamButton&quot;:false,&quot;showRootPostButton&quot;:false,&quot;rootPostUrl&quot;:&quot;&quot;,&quot;showRadarPostButton&quot;:false,&quot;radarKeys&quot;:&quot;&quot;,&quot;isUniblocked&quot;:false,&quot;isNsfw&quot;:false,&quot;isAdult&quot;:false,&quot;isSpam&quot;:false,&quot;isPrimaryBlog&quot;:false,&quot;canEdit&quot;:false,&quot;canReblogSelf&quot;:false,&quot;showLikeButton&quot;:false,&quot;showReblogButton&quot;:false,&quot;reblogUrl&quot;:&quot;&quot;,&quot;showMessagingButton&quot;:false,&quot;loginCheckIframeSrc&quot;:&quot;https:\/\/assets.tumblr.com\/assets\/html\/iframe\/login_check.html?_v=3de94a184d600617102ddd5b48fb36e9&quot;,&quot;appInstallUrls&quot;:{&quot;android&quot;:&quot;https:\/\/play.google.com\/store\/apps\/details?id=com.tumblr\u0026referrer=utm_source%3Dtumblr%26utm_medium%3Diframe%26utm_campaign%3Dbn_continue_or_install_cta&quot;,&quot;ios&quot;:&quot;https:\/\/apps.apple.com\/app\/apple-store\/id305343404?pt=212308\u0026ct=bn_continue_or_install_cta\u0026mt=8&quot;},&quot;appOpenReferrer&quot;:&quot;bn_header_open_btn&quot;,&quot;isShowSearch&quot;:true,&quot;supplyLogging&quot;:[],&quot;secondsSinceLastActivity&quot;:-1,&quot;installUrlOpenFailed&quot;:{&quot;android&quot;:&quot;https:\/\/play.google.com\/store\/apps\/details?id=com.tumblr\u0026referrer=utm_source%3Dtumblr%26utm_medium%3Diframe%26utm_campaign%3Dbn_header_app_open_failed&quot;,&quot;ios&quot;:&quot;https:\/\/apps.apple.com\/app\/apple-store\/id305343404?pt=212308\u0026ct=bn_header_app_open_failed\u0026mt=8&quot;},&quot;loginWallVariant&quot;:&quot;small_center&quot;}},&quot;Flags&quot;:{&quot;features&quot;:&quot;eyJmaWx0ZXJfbnNmdyI6dHJ1ZSwibW9iaWxlX3dlYl9nYXRlIjp0cnVlLCJzYWZlX21vZGUiOnRydWUsInNhZmVfbW9kZV9lbmFibGVkIjp0cnVlLCJrZXljb21tYW5kX2F1dG9fcGFnaW5hdGUiOnRydWUsImxvZ2dlZF9vdXRfc2VhcmNoIjp0cnVlLCJrcmFrZW5fd2ViX2xvZ2dpbmdfbGlicmFyeSI6dHJ1ZSwibGl2ZXBob3Rvc193ZWIiOnRydWUsInVzZXJfdGFnX2ZpbHRlcmluZyI6dHJ1ZSwic2FmZV9tb2RlX293bl9wb3N0Ijp0cnVlLCJwcm9qZWN0X3hfYXBwZWFsIjp0cnVlLCJtb2JpbGVfd2ViX3Bob3Rvc2V0cyI6dHJ1ZSwiaGlkZV9kZWZhdWx0X2hlYWRlcnNfYmxvZ19jYXJkcyI6dHJ1ZSwibm90aWZpY2F0aW9uX3JlcGx5X2xpbmtfdG9fbm90ZXMiOnRydWUsInR5cGluZ19pbmRpY2F0b3Jfd3JpdGUiOnRydWUsInR1bWJscl92aWRlb19zcG9uc29yZWRfZGF5Ijp0cnVlLCJjYXB0Y2hhOnVzZV9yZWNhcHRjaGEyIjp0cnVlLCJsaXR0bGVfc2lzdGVyIjp0cnVlLCJsb2dfbGFkeSI6dHJ1ZSwicmVkcG9wX3Bvc3RfZm9ybV9tb2JpbGVfY3JlYXRlIjp0cnVlLCJsZWdhY3lfcG9zdF9mb3JtX2J1dHRvbnNfbGlua190b19yZWRwb3AiOnRydWUsInNob3dfdHNwX2NsaWNrX3Rocm91Z2hfdG9nZ2xlIjp0cnVlLCJkYXJsYV9hZF9mZWVkYmFjayI6dHJ1ZSwic3RhdHVzX2luZGljYXRvciI6dHJ1ZSwiY29udmVyc2F0aW9uYWxfbm90aWZpY2F0aW9ucyI6dHJ1ZSwiZGlzYWJsZV95YWhvb19iX2Nvb2tpZSI6dHJ1ZSwibGl2ZXBob3RvcyI6dHJ1ZX0=&quot;},&quot;Context&quot;:{&quot;name&quot;:&quot;default&quot;,&quot;time&quot;:1645319548000,&quot;userinfo&quot;:{&quot;primary&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;channels&quot;:[]},&quot;hosts&quot;:{&quot;assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;secure_assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;secure_www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;embed_host&quot;:&quot;https:\/\/embed.tumblr.com&quot;,&quot;safe_host&quot;:&quot;https:\/\/safe.txmblr.com&quot;,&quot;platform_host&quot;:&quot;https:\/\/platform.tumblr.com&quot;},&quot;language&quot;:&quot;es_ES&quot;,&quot;language_simple&quot;:&quot;es&quot;,&quot;assets&quot;:&quot;https:\/\/assets.tumblr.com\/client\/prod\/&quot;},&quot;Translations&quot;:{&quot;Cancel&quot;:&quot;Cancelar&quot;,&quot;Nevermind&quot;:&quot;Cancelar&quot;,&quot;Ignore&quot;:&quot;Ignorar&quot;,&quot;Unfollow&quot;:&quot;Dejar de seguir&quot;,&quot;Are you sure you want to unfollow %1$s?&quot;:&quot;\u00bfSeguro que quieres dejar de seguir a %1$s?&quot;,&quot;Sorry, we seem to be having technical trouble.  Please try again later.&quot;:&quot;Lo sentimos, parece que estamos experimentando problemas t\u00e9cnicos. Vuelve a intentarlo m\u00e1s tarde.&quot;,&quot;Follow&quot;:&quot;Seguir&quot;,&quot;Follow %1$s&quot;:&quot;Seguir a %1$s&quot;,&quot;Put it back&quot;:&quot;Vuelve a tu sitio&quot;,&quot;See all&quot;:&quot;Ver todas&quot;,&quot;Block&quot;:&quot;Bloquear&quot;,&quot;%1$sAre you sure you want to block %2$s from %3$s?%4$sThey won&#039;t be able to follow %3$s, send %3$s messages, see %3$s in search results, or interact with any of %3$s&#039;s posts.%5$s&quot;:&quot;%1$s\u00bfSeguro que quieres bloquear a %2$s de %3$s?%4$sNo podr\u00e1 seguir a %3$s, enviar mensajes a %3$s, ver a %3$s en los resultados de b\u00fasqueda o interactuar de forma alguna con las publicaciones de %3$s.%5$s&quot;,&quot;%1$sBlock messages from this sender?%2$sAny further messages sent from their IP address will be blocked from your inbox. This can&#039;t be undone, by the way.%3$s&quot;:&quot;\u00bf%1$sQuieres bloquear los mensajes de este remitente?%2$sDejar\u00e1s de recibir mensajes enviados desde su misma direcci\u00f3n IP en tu bandeja de entrada. No olvides que no es posible deshacer este cambio.%3$s&quot;,&quot;Okay! We&#039;ll review the status of this and email you when we&#039;re done.&quot;:&quot;\u00a1Perfecto! Analizaremos el caso y te enviaremos un correo electr\u00f3nico cuando el proceso haya terminado.&quot;,&quot;This is marked as sensitive content. If that seems like a mistake, you can request a review.&quot;:&quot;Esta publicaci\u00f3n est\u00e1 marcada como contenido delicado. Si crees que se trata de un error, puedes pedirnos que la revisemos.&quot;,&quot;Request Review&quot;:&quot;Solicitar revisi\u00f3n&quot;,&quot;This post is still marked as sensitive, but is currently being reviewed.&quot;:&quot;Esta publicaci\u00f3n sigue marcada como contenido delicado, pero la estamos revisando.&quot;,&quot;After review, it was determined that this post contains sensitive content.&quot;:&quot;Tras revisarlo, hemos corroborado que el contenido de esta publicaci\u00f3n puede ser delicado.&quot;,&quot;This is marked as %1$ssensitive%2$s&quot;:&quot;Esta publicaci\u00f3n incluye %1$scontenido delicado%2$s&quot;,&quot;This Tumblr may contain sensitive media.&quot;:&quot;El contenido de este Tumblr puede ser delicado.&quot;,&quot;Sensitive posts are hidden. If you want to change that, disable Safe Mode in your settings.&quot;:&quot;Las publicaciones con contenidos que pueden resultar delicados est\u00e1n ocultas. Para mostrarlas, desactiva el modo seguro en el apartado de configuraci\u00f3n.&quot;,&quot;Hey, this post may contain adult content, so we&#039;ve hidden it from public view.&quot;:&quot;Vaya... Es posible que esta publicaci\u00f3n incluya contenido para adultos y, por eso, la hemos ocultado.&quot;,&quot;Learn more&quot;:&quot;M\u00e1s informaci\u00f3n&quot;,&quot;%1$sLearn more%2$s&quot;:&quot;%1$sM\u00e1s informaci\u00f3n%2$s&quot;,&quot;Safe Mode is on&quot;:&quot;Modo seguro activado&quot;,&quot;%1$sSafe mode is on%2$s&quot;:&quot;%1$sModo seguro activado%2$s&quot;,&quot;View this Tumblr&quot;:&quot;Ver este Tumblr&quot;,&quot;This content contains adult content which violates our Community Guidelines.&quot;:&quot;Esta publicaci\u00f3n incluye contenido para adultos y, por tanto, infringe las Normas de la comunidad.&quot;,&quot;This post was flagged because we think it contains adult content which violates our Community Guidelines. It has been hidden from others, but not deleted. If you think this was done in error, tap Appeal and a real, live human will review it.&quot;:&quot;Hemos marcado esta publicaci\u00f3n porque creemos que incluye contenido para adultos y, por lo tanto, incumple las Normas de la comunidad. De momento, est\u00e1 oculta para el resto de usuarios, pero no la hemos eliminado. Si crees que se trata de un error, utiliza el bot\u00f3n para solicitar una revisi\u00f3n y un miembro de nuestro equipo se encargar\u00e1 de comprobarla.&quot;,&quot;Your post is in content appeal. Once a decision has been made, we&#039;ll send you an email.&quot;:&quot;Esta publicaci\u00f3n se encuentra en revisi\u00f3n. Te enviaremos un correo electr\u00f3nico cuando hayamos tomado una decisi\u00f3n.&quot;,&quot;This post was flagged because it contains adult content which violates our Community Guidelines. It has not been deleted but is now only viewable to you. This decision cannot be appealed.&quot;:&quot;Hemos marcado esta publicaci\u00f3n porque incluye contenido para adultos y, por lo tanto, incumple las Normas de la comunidad. No la hemos eliminado, pero, a partir de ahora, solo podr\u00e1s verla t\u00fa. Esta decisi\u00f3n es definitiva y no podr\u00e1s solicitar que se revise.&quot;,&quot;This post was flagged because somewhere in your reblog there might be adult content which is a violation of our Community Guidelines.&quot;:&quot;Hemos marcado esta publicaci\u00f3n porque el reblogueo inclu\u00eda contenido para adultos y, por lo tanto, incumpl\u00eda las Normas de la comunidad.&quot;,&quot;This reblog is in content appeal&quot;:&quot;Este reblogueo se ha enviado al equipo de revisi\u00f3n&quot;,&quot;Your post is in content appeal&quot;:&quot;Tu contenido se ha enviado al equipo de revisi\u00f3n&quot;,&quot;This post was flagged because somewhere in your reblog there might be adult content.&quot;:&quot;Hemos marcado esta publicaci\u00f3n porque parece que el reblogueo inclu\u00eda contenido para adultos.&quot;,&quot;It looks like your post might be in violation of our Community Guidelines and is now hidden.&quot;:&quot;Parece que tu publicaci\u00f3n podr\u00eda incumplir nuestras Normas de la comunidad, as\u00ed que hemos decidido ocultarla.&quot;,&quot;Based on our Community Guidelines this post contains adult content and is now only viewable to you.&quot;:&quot;Seg\u00fan nuestras Normas de la comunidad, esta publicaci\u00f3n incluye contenido para adultos y, a partir de ahora, solo t\u00fa podr\u00e1s verla.&quot;,&quot;Your appeal was accepted! This post is no longer hidden.&quot;:&quot;Hemos valorado tu solicitud de revisi\u00f3n y \u00a1ten\u00edas raz\u00f3n! Este contenido ya no est\u00e1 oculto.&quot;,&quot;Dismiss&quot;:&quot;Descartar&quot;,&quot;Appeal&quot;:&quot;Solicitar revisi\u00f3n&quot;,&quot;This post contains filtered tags&quot;:&quot;Esta publicaci\u00f3n contiene etiquetas filtradas&quot;,&quot;Are you sure you want to log out?&quot;:&quot;\u00bfSeguro que quieres cerrar la sesi\u00f3n?&quot;,&quot;Likes&quot;:&quot;Me gusta&quot;,&quot;Following&quot;:&quot;Siguiendo&quot;,&quot;New&quot;:&quot;A\u00f1adir blog&quot;,&quot;Account&quot;:&quot;Cuenta&quot;,&quot;Settings&quot;:&quot;Configuraci\u00f3n&quot;,&quot;Help&quot;:&quot;Ayuda&quot;,&quot;Log out&quot;:&quot;Cerrar sesi\u00f3n&quot;,&quot;Posts&quot;:&quot;Publicaciones&quot;,&quot;Reach&quot;:&quot;Alcance&quot;,&quot;Followers&quot;:&quot;Seguidores&quot;,&quot;Activity&quot;:&quot;Actividad&quot;,&quot;Members&quot;:&quot;Miembros&quot;,&quot;Drafts&quot;:&quot;Borradores&quot;,&quot;Queue&quot;:&quot;En cola&quot;,&quot;Processing&quot;:&quot;Procesando&quot;,&quot;Review flagged posts&quot;:&quot;Comprobar publicaciones marcadas&quot;,&quot;Analytics&quot;:&quot;Estad\u00edsticas&quot;,&quot;Sponsor&quot;:&quot;Patrocinador&quot;,&quot;Sponsored&quot;:&quot;Patrocinado&quot;,&quot;About Tumblr Ads&quot;:&quot;Acerca de la publicidad en Tumblr&quot;,&quot;Edit appearance&quot;:&quot;Modificar apariencia&quot;,&quot;Your blog info, account info, and recent activity are in these menus.&quot;:&quot;La informaci\u00f3n de tu blog, los datos de tu cuenta y tu actividad reciente se encuentran en estos men\u00fas.&quot;,&quot;Wait, why?&quot;:&quot;Pero \u00bfpor qu\u00e9?&quot;,&quot;Okay, phew&quot;:&quot;\u00a1Ah, vale!&quot;,&quot;Why?&quot;:&quot;\u00bfQu\u00e9 ofrecemos?&quot;,&quot;It&#039;s so you never have to scroll to the top of the dashboard to access this stuff.&quot;:&quot;Lo hemos juntado todo aqu\u00ed para que no tengas que desplazarte hacia la parte superior del Escritorio cada vez que quieras acceder a estas opciones.&quot;,&quot;Ohhh&quot;:&quot;Aaaah&quot;,&quot;Loading\u2026&quot;:&quot;Cargando...&quot;,&quot;%1$s notes&quot;:&quot;%1$s notas&quot;,&quot;%1$s note&quot;:&quot;%1$s nota&quot;,&quot;%1$s views&quot;:&quot;%1$s visitas&quot;,&quot;%1$s view&quot;:&quot;%1$s visita&quot;,&quot;%1$s added this GIF to a post&quot;:&quot;%1$s ha utilizado este GIF en una publicaci\u00f3n&quot;,&quot;%1$s posted this&quot;:&quot;%1$s ha publicado esto&quot;,&quot;%1$s%2$s likes%3$s&quot;:&quot;%1$s%2$s Me gusta%3$s&quot;,&quot;%1$s%2$s like%3$s&quot;:&quot;%1$s%2$s Me gusta%3$s&quot;,&quot;%1$s%2$s reblogs%3$s&quot;:&quot;%1$s%2$s reblogueos%3$s&quot;,&quot;%1$s%2$s reblog%3$s&quot;:&quot;%1$s%2$s reblogueo%3$s&quot;,&quot;%1$s%2$s likes%3$s and %4$s%5$s reblogs%3$s&quot;:&quot;%1$s%2$s Me gusta%3$s y %4$s%5$s reblogueos%3$s&quot;,&quot;%1$s%2$s likes%3$s and %4$s%5$s reblog%3$s&quot;:&quot;%1$s%2$s Me gusta%3$s y %4$s%5$s reblogueo%3$s&quot;,&quot;%1$s%2$s like%3$s and %4$s%5$s reblogs%3$s&quot;:&quot;%1$s%2$s Me gusta%3$s y %4$s%5$s reblogueos%3$s&quot;,&quot;Reply&quot;:&quot;Responder&quot;,&quot;Add to the discussion&quot;:&quot;Comparte tu opini\u00f3n&quot;,&quot;Unleash a compliment&quot;:&quot;Haz un cumplido&quot;,&quot;Have something to say?&quot;:&quot;\u00bfAlgo que decir?&quot;,&quot;Reply your heart out&quot;:&quot;Abre tu coraz\u00f3n&quot;,&quot;Add something wonderful&quot;:&quot;Comparte algo espectacular&quot;,&quot;Send something nice&quot;:&quot;Di algo bonito&quot;,&quot;Your words here&quot;:&quot;Aqu\u00ed es donde van las palabras&quot;,&quot;Say your thing&quot;:&quot;\u00bfAlgo que decir?&quot;,&quot;Block %1$s&quot;:&quot;Bloquear a %1$s&quot;,&quot;Report&quot;:&quot;Denunciar&quot;,&quot;%1$sReport %2$s&#039;s post?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$s\u00bfSeguro que quieres denunciar el blog de %2$s?%3$sSi infringe las normas de la comunidad, lo eliminaremos.%4$s&quot;,&quot;%1$sReport %2$s&#039;s reply?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$s\u00bfSeguro que quieres denunciar el blog de %2$s?%3$sSi infringe las normas de la comunidad, lo eliminaremos.%4$s&quot;,&quot;Hide note&quot;:&quot;Ocultar nota&quot;,&quot;Delete reply&quot;:&quot;Borrar respuesta&quot;,&quot;%1$sYou definitely want to hide this note?%2$s&quot;:&quot;%1$s\u00bfSeguro que quieres ocultar esta nota?%2$s&quot;,&quot;%1$sYou definitely want to delete this reply?%2$s&quot;:&quot;%1$s\u00bfSeguro que quieres borrar esta respuesta?%2$s&quot;,&quot;%1$sDelete your tip??%2$s&quot;:&quot;%1$s\u00bfQuieres eliminar la propina?%2$s&quot;,&quot;Deleting your tip&quot;:&quot;Al hacerlo, solo la borrar\u00e1s de la pesta\u00f1a de las respuestas y de las notas. %1$sNo recibir\u00e1s ning\u00fan reembolso por tu propina%2$s. Si necesitas ayuda o tienes alguna otra pregunta, %3$sescribe al equipo de asistencia de Tumblr%4$s.&quot;,&quot;Hide it&quot;:&quot;S\u00ed, ocultadla&quot;,&quot;Delete it&quot;:&quot;S\u00ed, borradla&quot;}}"></noscript><script src="https://assets.tumblr.com/client/prod/standalone/tumblelog/index.build.js?_v=d0109502af8cc37605e97d58cb47ab78"></script></body>
+
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+<script>
+$(document).ready(function() {
+ var $container = $("#content"); 
+ var filters = {};
+ var $grid = $container.isotope({
+   itemSelector: ".box",
+   percentPosition: false 
+ });
+ $(".option-set a").click(function(e) {
+   var $this = $(this); // cache the clicked link
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr); // cache the filter
+   var $optionSet = $this.parents(".option-set"); // cache the parent element
+   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group 
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = []; 
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
+   var activeClass = "selected", // the class for active links
+     exclClass = "exclusive"; // the class for exclusive groups
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilter(filters);
+   $grid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
+});
+</script>
+
+
+</html>
